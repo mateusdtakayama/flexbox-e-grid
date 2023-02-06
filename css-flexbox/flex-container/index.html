@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Container</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="header">
+    <h1>Display: flex;</h1>
+</div>
+<p>Torna o elemento em um flex container automaticamente transformando todos os seus filhos diretos em flex itens</p>
+
+<h2>Display: block</h2>
+
+<section class="container">
+    <div class="item">1</div>
+    <div class="item">2</div>
+    <div class="item">3</div>
+    <div class="item">4</div>
+</section>
+
+<h2>Display: flex;</h2>
+<p>O tamanho do item fica exatamente do tamanho do conteúdo</p>
+<section class="container flex">
+    <div class="item">1</div>
+    <div class="item">2</div>
+    <div class="item">3</div>
+    <div class="item">4</div>
+</section>
+
+<h2>Display: flex;</h2>
+<p>Respeita o tamanho do conteúdo e quebra o container caso não tenha mais espaço</p>
+<section class="container flex">
+    <div class="item">ItemTeste</div>
+    <div class="item">ItemTeste</div>
+    <div class="item">ItemTeste</div>
+    <div class="item">ItemTeste</div>
+    <div class="item">ItemTeste</div>
+    <div class="item">ItemTeste</div>
+    <div class="item">ItemTeste</div>
+</section>
+
+<h2>Display: flex; + flex-wrap: wrap</h2>
+<p>Vem inicialmente com o flex-wrap: nowrap, para não quebrar  a linha.</p>
+<section class="container flex flex-wrap">
+    <div class="item">ItemTeste</div>
+    <div class="item">ItemTeste</div>
+    <div class="item">ItemTeste</div>
+    <div class="item">ItemTeste</div>
+    <div class="item">ItemTeste</div>
+    <div class="item">ItemTeste</div>
+    <div class="item">ItemTeste</div>
+</section>
+
+<h2>Display: flex; + flex: 1</h2>
+<p>O Flex: 1 fará o tamanho do item aumentar até preencher o container todo, como todos ficaram <br>
+com o flex: 1, dividiram o container em 1/3 para cada.</p>
+<section class="container flex">
+    <div class="item flex-item-1">Flex item 1</div>
+    <div class="item flex-item-1">Flex item 1</div>
+    <div class="item flex-item-1">Flex item 1</div>
+</section>
+
+<h2>Display: flex; + flex: 1 e 2</h2>
+<p>flex: 2 terá 2x o tamanho do 1</p>
+<section class="container flex">
+    <div class="item flex-item-1">Flex item 1</div>
+    <div class="item flex-item-2">Flex item 2</div>
+</section>
+
+
+<div class="header" style="margin-top: 10px;">
+    <h1>Flex-direction</h1>
+</div>
+
+<h2>flex-direction: row + (flex: 1)</h2>
+<p>row =  linha</p>
+<section class="container flex flex-direction-row">
+    <div class="item flex-item-1">1</div>
+    <div class="item flex-item-1">2</div>
+    <div class="item flex-item-1">3</div>
+</section>
+
+<h2>flex-direction: row-reverse + (flex: 1)</h2>
+<p>Inverte a ordem dos items na linha</p>
+<section class="container flex flex-direction-row-reverse">
+    <div class="item flex-item-1">1</div>
+    <div class="item flex-item-1">2</div>
+    <div class="item flex-item-1">3</div>
+</section>
+
+<h2>flex-direction: column + (flex: 1)</h2>
+<p>column = coluna</p>
+<section class="container flex flex-direction-column">
+    <div class="item flex-item-1">1</div>
+    <div class="item flex-item-1">2</div>
+    <div class="item flex-item-1">3</div>
+</section>
+
+<h2>flex-direction: column-reverse + (flex: 1)</h2>
+<p>Inverte a ordem dos items na coluna</p>
+<section class="container flex flex-direction-column-reverse">
+    <div class="item flex-item-1">1</div>
+    <div class="item flex-item-1">2</div>
+    <div class="item flex-item-1">3</div>
+</section>
+
+<div class="header" style="margin-top: 10px;">
+    <h1>Flex-wrap</h1>
+</div>
+
+<h2>flex-wrap: nowrap</h2>
+<p>Os itens não quebrarão a linha caso ficarem maiores que o container.</p>
+<section class="container flex flex-nowrap">
+    <div class="item">AAAAAAAAAA</div>
+    <div class="item">AAAAAAAAAA</div>
+    <div class="item">AAAAAAAAAA</div>
+    <div class="item">AAAAAAAAAA</div>
+</section>
+
+<h2>flex-wrap: wrap</h2>
+<p>Os itens quebrarão a linha caso ficarem maiores que o container.</p>
+<section class="container flex flex-wrap">
+    <div class="item">AAAAAAAAAA1</div>
+    <div class="item">AAAAAAAAAA2</div>
+    <div class="item">AAAAAAAAAA3</div>
+    <div class="item">AAAAAAAAAA4</div>
+</section>
+
+<h2>flex-wrap: wrap-reverse</h2>
+<p>Os itens quebrarão a linha caso ficarem maiores que o container, mas quebra pra cima.</p>
+<section class="container flex flex-wrap-reverse">
+    <div class="item">AAAAAAAAAA1</div>
+    <div class="item">AAAAAAAAAA2</div>
+    <div class="item">AAAAAAAAAA3</div>
+    <div class="item">AAAAAAAAAA4</div>
+</section>
+
+</body>
+</html>
